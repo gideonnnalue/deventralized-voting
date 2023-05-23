@@ -17,7 +17,7 @@ contract Voting {
     }
 
     mapping(uint => Vote) votes;
-    mapping(address => bool) members;
+    mapping(address => bool) public members;
 
     event MemberJoined(address indexed member, uint joinedAt);
     event VoteCreated(
@@ -71,6 +71,7 @@ contract Voting {
         votes[voteId].votes = new uint256[](options);
 
         emit VoteCreated(msg.sender, voteId, block.timestamp, endTime);
+        nextVoteId++;
     }
 
     function vote(
