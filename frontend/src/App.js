@@ -67,8 +67,11 @@ function App() {
       />
       <div className="container">
         <Routes>
-          <Route path="create-vote" element={<CreateVotes />} />
-          <Route path="votes" element={<Votes />} />
+          <Route
+            path="create-vote"
+            element={<CreateVotes contract={contract} />}
+          />
+          <Route path="votes" element={<Votes contract={contract} />} />
         </Routes>
       </div>
     </Router>

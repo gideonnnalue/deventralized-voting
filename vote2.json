@@ -1,0 +1,4 @@
+{
+  "description": "Who should handle our accounts",
+  "option": ["John", "Samuel", "Vincent", "Daniel"]
+}

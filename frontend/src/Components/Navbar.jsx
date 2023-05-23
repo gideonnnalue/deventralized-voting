@@ -9,7 +9,7 @@ const Navigationbar = ({ connect, connected, becomeMember, isMember }) => {
         <Navbar.Collapse>
           <Nav className="me-auto">
             <Nav.Link href="/votes">Votes</Nav.Link>
-            <Nav.Link href="/create-vote">Create Vote</Nav.Link>
+            <Nav.Link href="/create-vote">Create vote</Nav.Link>
             {!isMember && (
               <Button variant="success" onClick={becomeMember}>
                 Become Member
